@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+            text-align: center;
+        }
+        .game{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 3;
+            height:350px;
+            width: 500px;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        button{
+            font-size: 2rem;
+            background-color:aliceblue;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <h1>Welcome to my TicTacToe</h1>
+        <div class="game">
+            <button></button>
+            <button></button>
+            <button></button>
+    
+            <button></button>
+            <button></button>
+            <button></button>
+            
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+    </div>
+
+    <script>
+
+        choice=prompt("Enter your choice X/O");
+        var cpuChoice="";
+        var btns=document.querySelectorAll("button");
+        var num=(Math.random()*8);
+        if(choice=="X"||choice=="x")
+        {
+            cpuChoice="0";
+        }
+        else
+        {
+            cpuChoice="X";
+        }
+        
+
+        btns.forEach(element => {
+         
+            element.addEventListener("click",function()
+            {
+                event.target.innerHTML=choice;
+                cputurn();
+            })
+        });
+
+        function cputurn(){
+            pos=parseInt(Math.random()*8);
+
+            if(btns[pos].innerHTML==choice||btns[pos].innerHTML==cpuChoice)
+            {
+                cputurn();
+            }
+            else{
+                btns[pos].innerHTML=cpuChoice;
+            }
+            winnings();
+        }
+
+        var winner=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+
+        function winnings(){
+            for(i=0;i<winner.length;i++)
+            {
+                if(btns[winner[i][0]].innerHTML==choice &&
+                btns[winner[i][1]].innerHTML==choice &&
+                btns[winner[i][2]].innerHTML==choice )
+                {
+                    alert("CONGRATULATIONS!!! YOU WIN");
+                }
+                else if(btns[winner[i][0]].innerHTML==cpuChoice &&
+                btns[winner[i][1]].innerHTML==cpuChoice &&
+                btns[winner[i][2]].innerHTML==cpuChoice )
+                {
+                    alert("OPPONENT WIN");
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
