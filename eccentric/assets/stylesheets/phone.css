@@ -1,0 +1,180 @@
+
+/* banner section */
+#banner{
+    height: 100vh;
+}
+.banner-view .banner-caption {
+    position: absolute;
+    top: 25%;
+    width: 65%;
+    line-height: 1;
+}
+
+.container{
+    max-width: 960px;
+    padding: 0 2rem; 
+    margin: 0 auto;
+}
+
+
+/* header section  */
+header{
+    min-height: 30px;
+    cursor: pointer;
+}
+header .hamburger{
+    display: block;
+}
+header .container{
+    position: relative;
+}
+header input[type="checkbox"]{
+    display: block;
+    opacity: 0;
+}
+header #main-nav {
+    display: none;
+}
+header .hamburger,input[type="checkbox"]{
+    position: absolute;
+    right: 5px;
+}
+header input[type="checkbox"]:checked~ #main-nav{
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: black;
+   
+    width: 90%;
+    z-index: 10;
+}
+header input[type="checkbox"]:checked~#main-nav ul{
+    height: 30vh;
+    flex-direction: column;
+    /* position: absolute;
+    top: 10px; */
+    margin-left: 10px;
+    /* z-index: 1; */
+}
+
+
+
+
+/* intro section */
+#intro .container{
+    flex-direction: column; 
+}
+#intro .side-image{
+    margin-left: 30px;
+}
+#intro .about{
+    margin-top: 20px;
+    width: 90%;
+}
+#intro .about p{
+    font-size: 23px;
+}
+#intro .side-image {
+    min-height: 600px;
+    min-width: 450px;
+    background-repeat: no-repeat;
+    background-image: url("../images/myimage.jpg");
+    background-size: cover;
+}
+
+
+
+/* content bar section */
+
+
+
+/* gallery section */
+#gallery .container{
+    width: 80%;
+}
+
+
+
+/* quote section */
+#quote{
+    height: 450px;
+}
+#quote .para{
+    position: absolute;
+    top: 5%;
+    width: 90%;
+}
+#quote .about{
+    flex-direction: row;
+    position: absolute;
+    top: 67%;
+    left: 2%;
+}
+#quote .about h3{
+    margin:40px 10px;
+}
+#quote .about h5{
+    margin:-30px 10px;
+}
+
+
+
+/* pc section */
+#pc .pc-img {
+    padding: 60px 60px 0 30px;
+    margin: 10px;
+}
+#pc h1{
+    padding: 0 0  10px 10px;
+}
+#pc .btn1 {
+    margin: 0 0 70px 301px;
+}
+
+
+
+/* article section */
+#article .container{
+    flex-direction: column;
+}
+#article .container .left{
+    font-size: 40px;
+    width: 100%;
+    padding: 50px 0 0 0;
+}
+#article .container .left p{
+    width: 100%;
+    font-size: 25px;
+}
+#article .right {
+    padding: 20px 0;
+    width: 100%;
+}
+#article .img1,#article .img2{
+    min-width: 600px;
+    min-height: 400px;
+}
+#article .right .btn {
+    margin: 329px 10px;
+}
+
+
+
+/* footer section */
+footer .about{
+    margin-left: 100px;
+}
+
+
+/* end note */
+#end-note .container{
+    flex-direction: column;
+ }
+ #end-note .icons{
+    margin-left: 0px;
+}
+  #end-note p{
+    width: 100%;
+    padding: 6px;
+  }
