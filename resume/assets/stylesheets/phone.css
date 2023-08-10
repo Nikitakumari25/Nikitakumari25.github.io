@@ -1,0 +1,80 @@
+.container{
+    padding: 0 2rem;
+}
+
+
+/* header section */
+.hamburger{
+    display: block;
+}
+input[type="checkbox"]{
+    display: block;
+    opacity: 0;
+}
+header nav{
+    margin: 0;
+}
+header nav ul{
+    display: none;
+}
+.hamburger,input[type="checkbox"]{
+    position: absolute;
+    right: 20px;
+}
+input[type="checkbox"]:checked~nav{
+    display: block;
+    position: absolute;
+    top: 84px;
+    left: 0;
+    background-color: #EF6262;
+    height: 60vh;
+    width: 100%;
+    z-index: 10;
+    transition: 0.3s ease top;
+}
+input[type="checkbox"]:checked~nav ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+}
+
+/* End of header section */
+
+
+/* home section */
+#home .home .caption {
+    width: 80%;
+    margin-top: 98px;
+}
+#home .home h1{
+    font-size: 4.2rem;
+}
+#home .home #heading{
+    font-size: 5.2rem;
+    font-weight: 700;
+}
+/* End of home section */
+
+
+/* about section */
+#about p{
+    margin: 12px;
+    width: 90%;
+}
+/* End of about section */
+
+
+
+#projects .projects-info .caption h3{
+    font-size: 2.5rem;
+
+}
+
+
+
+
+
+
+
