@@ -1,0 +1,289 @@
+/* CSS Selectors */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.1rem;
+    overflow-x: hidden;
+}
+/*End of CSS Selectors */
+
+
+
+/* Helper classes */
+.primary{
+    color: #103F6B;
+    margin: 60px 0 20px 0;
+    position: relative;
+}
+#line{
+    position: absolute;
+    height: 0.6vh;
+    width: 22%;
+    left: 0px;
+    top: 43px;
+    background-color: #F9B618;
+    margin-bottom: 30px;
+}
+#bold{
+    font-weight: bold;
+}
+table{
+    font-weight: bold;
+    border-collapse: collapse;
+    margin: 40px 0;
+}
+table .first th{
+    background-color: #0D3D6B;
+    color: white;
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin: 20px 0;
+    padding: 16px 10px;
+}
+table tr th{
+    text-align: start;
+    padding: 14px 10px;
+}
+table tr th:nth-child(2){
+    padding:0 200px 0 120px;
+}
+table tr:nth-child(even){
+    background-color: #F2F2F2;
+}
+/* End of Helper classes */
+
+
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+header .first{
+    background-color: #081054;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100vw;
+}
+header .first .moving_text{
+    padding: 14px 81px 14px 124px; 
+    height: 100%;
+}
+header .first .moving_text p{
+    animation: move 10s linear 0s infinite;
+}
+@keyframes move {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(10px);
+    }
+}
+header .first .btns{
+    margin-left:-30px;
+}
+header .first .btns .btn{
+    padding: 12px 20px;
+    color: #103F6B;
+    font-weight: 600;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+header .header{
+    display: flex;
+    align-items: center;
+    padding: 5px 0 5px 134px;
+    background-color: #fff;  
+}
+header ul{
+    display: flex;
+    margin-left: 40px;
+    list-style: none;
+}
+header ul li a{
+    color: #08106F;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+}
+header ul li a i{
+    padding:0 5px;
+    font-size: 1.2rem;
+}
+
+
+#home{
+    background-color: #081054;  
+}
+#home img{
+    padding: 50px 160px 0px 160px;
+}
+#home i{
+    padding: 0 5px;
+}
+#home .about{
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    padding:0 0 20px 90px;
+}
+#home .carousel{
+    display: flex;
+    height: 100%;
+    width: 500%;
+}
+#home .carousel div{
+    width: 20%;
+    height: 100%;
+    background-size: 100% 100%;
+    animation: move 3s linear 5s infinite;
+}
+@keyframes move {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-3000px);
+    }
+}
+
+
+
+.page_left{
+    padding: 0px 20px 0 134px;
+    width: 66.5%;
+    font-size: 1.4rem;
+    float: left;
+}
+
+
+#intro p{
+    margin: 40px 0;
+}
+
+#intro ol{
+    padding-left: 50px;
+    padding-top: 15px;
+}
+#intro li{
+    padding: 8px 0;
+}
+#intro ul{
+    padding-left: 50px;
+    padding-top: 15px;
+}
+
+
+
+
+
+
+#seats table tr th:nth-child(2){
+    padding:0 40px 0 174px;
+}
+
+
+#deadlines table tr:nth-child(odd){
+    background-color: #F2F2F2;
+}
+#deadlines table tr:nth-child(even){
+    background-color: white;
+}
+#deadlines table tr th:nth-child(2){
+    padding:0 130px 0 150px;
+}
+
+
+#faq .faq .qstn{
+    cursor: pointer;
+}
+#faq .faq .qstn .answer{
+    display: none;
+    border: none;
+}
+#faq p{
+    margin: 10px 0;
+    border-bottom: 1px solid #F9B618;
+}
+
+
+
+
+#why p{
+    padding: 10px 30px;
+    line-height: 1.6;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+
+.page_right{
+    float: left;
+    height: 100vh;
+    width: 33.5%;
+    padding-top: 44px;
+}
+.page_right form{
+    border: 1px solid #F9B618;
+    width: 75%;
+    border-radius: 7px;
+    padding: 10px;
+}
+.page_right form h1{
+    font-size: 1.5rem;
+    color: #0D3D96;
+    text-align: center;
+    margin: 10px 0;
+}
+.page_right form select{
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid rgba(128, 128, 128, 0.322);
+    margin: 5px 0;
+    color: grey;
+    padding: 10px 15px;
+}
+.page_right form select:focus{
+    border: 1px solid #a0bddb;
+   
+}
+.page_right form input{
+    width: 46%;
+    border-radius: 30px;
+    border: 1px solid rgba(128, 128, 128, 0.322);
+    margin: 5px 10px 5px 0;
+    color: grey;
+    padding: 10px 15px;
+    outline: none;
+}
+.page_right form button{
+    background-color: #F9B618;
+    color: #0D3D6B;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    margin: 10px 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.page_right form button i{
+    padding: 0 5px;
+}
